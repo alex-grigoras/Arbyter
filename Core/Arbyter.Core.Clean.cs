@@ -6,9 +6,13 @@ using System.IO;
 
 namespace Arbyter
 {
-    public partial class ArbyterCore
+    public class ArbyterCoreClean
     {
         private int _deletedFileCount;
+        private StreamWriter LogFile;
+
+        internal ArbyterCoreClean() { }
+
         //checks if file should be deleted
         private bool ShouldDeleteFile(string filename, TransferLocations transferLocations)
         {
@@ -47,6 +51,8 @@ namespace Arbyter
             foreach (var childDirectory in childDirectories)
             {
                 var sourceChildDir = new DirectoryInfo(transferLocations.SourcePath + "\\" + childDirectory.Name);
+                
+                //if the chiled does not exist in the source then delete it immediately
                 if (!sourceChildDir.Exists)
                 {
                     _deletedFileCount += childDirectory.GetFiles("*", SearchOption.AllDirectories).Count();
@@ -67,7 +73,7 @@ namespace Arbyter
         {
             try
             {
-                _copiedFileCount = 0;
+                _deletedFileCount = 0;
                 if (transferLocations.Logging)
                 {
                     LogFile = new StreamWriter(transferLocations.DestinationPath + "\\Arbyter_Log.txt", true);

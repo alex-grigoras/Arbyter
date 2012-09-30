@@ -1,0 +1,6 @@
+1. Polymorphise the exception error messages 
+if()....
+if()... is not kosher
+
+2. Find a way to make the implementation of factory pattern in Core better
+Perhaps implement an interface on Copy and Clean which exposes a "DoYourJob" method or smth like that

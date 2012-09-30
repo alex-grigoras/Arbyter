@@ -38,8 +38,8 @@ namespace Arbyter
 
             if (!ValidPaths()) return;
                 
-            var arbyterInstance = new ArbyterCore();
-            ActionReport syncReport = arbyterInstance.RunCopy(new TransferLocations(SourceTextBox.Text,
+            var arbyterCopyInstance = ArbyterCoreFactory.Instance.GetArbyterCopy();
+            ActionReport syncReport = arbyterCopyInstance.RunCopy(new TransferLocations(SourceTextBox.Text,
                                                                                         DestinationTextBox.Text,
                                                                                         Logging.Checked));
             if (syncReport.Result == ActionResult.Success)
@@ -111,8 +111,8 @@ namespace Arbyter
         {
             if (!ValidPaths()) return;
 
-            var arbyterInstance = new ArbyterCore();
-            ActionReport cleanReport = arbyterInstance.RunClean(new TransferLocations(SourceTextBox.Text,
+            var arbyterCleanInstance = ArbyterCoreFactory.Instance.GetArbyterClean();
+            ActionReport cleanReport = arbyterCleanInstance.RunClean(new TransferLocations(SourceTextBox.Text,
                                                                                         DestinationTextBox.Text,
                                                                                         Logging.Checked));
             if (cleanReport.Result == ActionResult.Success)
@@ -153,7 +153,7 @@ namespace Arbyter
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-            ToTray.Icon = new Icon("TrayIcon.ico");
+            ToTray.Icon = Resources.TrayIcon;
         }
 
     }

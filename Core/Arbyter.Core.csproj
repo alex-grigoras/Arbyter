@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Arbyter.Core.Copy.cs" />
     <Compile Include="Arbyter.Core.Clean.cs" />
+    <Compile Include="Arbyter.Core.Factory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ActionReport.cs" />
     <Compile Include="TransferLocations.cs" />

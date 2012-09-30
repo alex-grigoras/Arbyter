@@ -9,7 +9,7 @@ namespace Arbyter
     public class AutoCopy
     {
         private Timer _timer;
-        private ArbyterCore _arbyterInstance;
+        private ArbyterCoreCopy _arbyterCopyInstance;
         private TransferLocations _transferLocations;
         public double CopyInterval { get; set; }
 
@@ -18,7 +18,7 @@ namespace Arbyter
         {
             //default copy interval
             CopyInterval = 5 * 60 * 1000;
-            _arbyterInstance = new ArbyterCore();
+            _arbyterCopyInstance = ArbyterCoreFactory.Instance.GetArbyterCopy();
             _transferLocations = transferLocations;
             _timer = new Timer();
             _timer.AutoReset = true;
@@ -39,7 +39,7 @@ namespace Arbyter
 
         public void TimerElapsedEvent(object sender, EventArgs args)
         {
-            var syncResult = _arbyterInstance.RunCopy(_transferLocations);
+            var syncResult = _arbyterCopyInstance.RunCopy(_transferLocations);
             if (syncResult.Result == ActionResult.Failure)
                 ErrorManager.Appologise(syncResult.Exception);
         } 

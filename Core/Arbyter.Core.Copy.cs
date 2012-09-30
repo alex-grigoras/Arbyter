@@ -9,12 +9,14 @@ namespace Arbyter
     
     
     //Automated Resource Backup Assistent
-    public partial class ArbyterCore
+    public class ArbyterCoreCopy
     {
        
         private int _copiedFileCount;
         private StreamWriter LogFile;
         
+        internal ArbyterCoreCopy(){}
+
         //checks if file should be copied
         private bool ShouldCopyFile(string filename, TransferLocations transferLocations)
         {
