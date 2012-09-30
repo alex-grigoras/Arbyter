@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbyter.Core", "Core\Arbyter.Core.csproj", "{BE33B069-7387-405E-8D43-FFB6B9BE31CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbyter.GUI", "ArbyterGui\Arbyter.GUI.csproj", "{2083F24E-E5A9-416D-B7DE-A27951A449A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbyter.AutoCopy", "AutoCOpy\Arbyter.AutoCopy.csproj", "{02699705-8206-4583-B95E-AB64CE4DA49A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbyter.ErrorManager", "ErrorManager\Arbyter.ErrorManager.csproj", "{3D26C1A8-01DF-4A5F-995E-0813649F62B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE33B069-7387-405E-8D43-FFB6B9BE31CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE33B069-7387-405E-8D43-FFB6B9BE31CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE33B069-7387-405E-8D43-FFB6B9BE31CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE33B069-7387-405E-8D43-FFB6B9BE31CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2083F24E-E5A9-416D-B7DE-A27951A449A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2083F24E-E5A9-416D-B7DE-A27951A449A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2083F24E-E5A9-416D-B7DE-A27951A449A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2083F24E-E5A9-416D-B7DE-A27951A449A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02699705-8206-4583-B95E-AB64CE4DA49A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02699705-8206-4583-B95E-AB64CE4DA49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02699705-8206-4583-B95E-AB64CE4DA49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02699705-8206-4583-B95E-AB64CE4DA49A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D26C1A8-01DF-4A5F-995E-0813649F62B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D26C1A8-01DF-4A5F-995E-0813649F62B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D26C1A8-01DF-4A5F-995E-0813649F62B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D26C1A8-01DF-4A5F-995E-0813649F62B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
